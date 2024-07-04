@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Recipient {
+  id: String!
+  bank: String!
+  account_number: String!
+  first_name: String!
+  middle_name: String
+  last_name: String!
+  email: String!
+  account_name: String!
+}
+
+type Query {
+  recipients: [Recipient!]!
+  recipient(id: String!): Recipient!
+}
+
+type Mutation {
+  createRecipient(createRecipientInput: CreateRecipientInput!): Recipient!
+  removeRecipient(id: String!): Recipient!
+}
+
+input CreateRecipientInput {
+  id: String
+  bank: String!
+  account_number: String!
+  first_name: String!
+  middle_name: String
+  last_name: String!
+  email: String!
+  account_name: String!
+}
